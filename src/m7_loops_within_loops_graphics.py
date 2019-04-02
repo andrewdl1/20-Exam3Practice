@@ -192,7 +192,7 @@ def many_hourglasses(window, square, m, colors):
 
     Preconditions:
       :type window: rg.RoseWindow
-      :type square: rg.Square
+      :type square: rg.Squaree
       :type m: int
       :type colors: (list | tuple) of str
     where m is positive and colors is a sequence of strings,
