@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Dalton Andrew.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -37,6 +37,24 @@ def run_test_zero_changer():
     # function.  Try to choose some unexpected things like empty lists
     # or an empty tuple, or a list with no zeros, etc.
     # -------------------------------------------------------------------------
+    # Test 2:
+    test1 = ([], [2, 4, 2, 5, 5, 3], [1, 1, 1, 0])
+    expected1 = ([], [2, 4, 2, 5, 5, 3], [1, 1, 1, 1])
+    zero_changer(test1)
+    print()
+    print('Test 1:')
+    print('  Expected:', expected1)
+    print('  Actual:  ', test1)
+
+    # Test 3:
+    test1 = ([102, 21, 23420, 124210, 421], [0, 0, 0, 0, 0], [219, 429, 92, 2, 1, 2, 4, 4, 2, 1, 1, 0], [0, 1, 2, 3])
+    expected1 = (
+    [102, 21, 23420, 124210, 421], [1, 2, 3, 4, 5], [219, 429, 92, 2, 1, 2, 4, 4, 2, 1, 1, 6], [7, 1, 2, 3])
+    zero_changer(test1)
+    print()
+    print('Test 1:')
+    print('  Expected:', expected1)
+    print('  Actual:  ', test1)
 
 
 def zero_changer(tuple_of_lists):
@@ -64,7 +82,7 @@ def zero_changer(tuple_of_lists):
       :type tuple_of_lists: tuple of list[int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -72,6 +90,13 @@ def zero_changer(tuple_of_lists):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  10 minutes.
     # -------------------------------------------------------------------------
+    new = 1
+    for k in range(len(tuple_of_lists)):
+        if len(tuple_of_lists[k]) > 0:
+            for j in range(len(tuple_of_lists[k])):
+                if tuple_of_lists[k][j] == 0:
+                    tuple_of_lists[k][j] = new
+                    new = new + 1
 
 
 # -----------------------------------------------------------------------------
